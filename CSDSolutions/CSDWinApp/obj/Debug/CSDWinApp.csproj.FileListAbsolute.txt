@@ -1,0 +1,2 @@
+C:\Users\Daniel.Daniel-PC\AppData\Local\Temporary Projects\CSDWinApp\bin\Debug\CSDWinApp.exe.config
+C:\Users\Daniel.Daniel-PC\Source\Repos\CSDRepo\CSDSolutions\CSDWinApp\bin\Debug\CSDWinApp.exe.config

@@ -1,24 +1,27 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using POISService;
 
 namespace POISTest
 {
     [TestClass]
-    public class UnitTest1
+    public class TestPois
     {
         
         [TestMethod]
-        public void TestMethod1()
+        public void DeberiaObtenerPOIsMasCercanos()
         {
             var servicio = new Service1();
-            var listaCordenadas = servicio.ObtenerPoIsMasCercanos(1, 2, 3);
-
+            var listaCordenadas = servicio.ObtenerPoIsMasCercanos(-2.132114, -79.865806, 3);
+             
+         
             Assert.IsNull(listaCordenadas);
 
-            
+            //Assert.AreEqual(-2.143007, listaCordenadas.First().Lat);
+
 
         }
 

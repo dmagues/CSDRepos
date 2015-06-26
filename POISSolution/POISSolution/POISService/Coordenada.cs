@@ -8,9 +8,10 @@ namespace POISService
 {
     public class Coordenada
     {
-
-        private double Lat;
-        private double Lng;
+        public string Categoria { get; set; }
+        public string Nombre { get; set; }
+        public double Lat { get; set; }
+        public double Lng { get; set; }
         
 
         public Coordenada  ObtenerCoordenada()
@@ -28,8 +29,10 @@ namespace POISService
             return Lng;
         }
 
-        public void SetCoordenada(double plat, double plng )
+        public void SetCoordenada(double plat, double plng, string pcategoria, string pnombre )
         {
+            Categoria = pcategoria;
+            Nombre = pnombre;
             Lat = plat;
             Lng = plng;
         }

@@ -67,6 +67,7 @@ namespace POISService
             double x2 = LatitudAMetros(cnd.ObtenerLatitud());
             double y1 = LongitudAMetros(this.Lng);
             double y2 = LongitudAMetros(cnd.ObtenerLongitud());
+            
             return Math.Sqrt(Math.Pow((x2 - x1), 2) + (Math.Pow((y2 - y1), 2)));
         }
     }

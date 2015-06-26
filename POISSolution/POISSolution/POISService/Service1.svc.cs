@@ -17,6 +17,11 @@ namespace POISService
             return string.Format("You entered: {0}", value);
         }
 
+        public void ObtenerPoIsMasCercanos(double x, double y, double radio)
+        {
+
+        }
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)

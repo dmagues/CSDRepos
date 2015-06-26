@@ -46,7 +46,7 @@ namespace POISTest
         {
             
             Coordenada cnds2 = new Coordenada();
-            double latx1 = -74.48;
+            double latx1 = -75.48;
             double lngy1 = -7.6;
             double latx2 = -74.49;
             double lngy2 = -7.62;
@@ -64,6 +64,7 @@ namespace POISTest
             double y2 = Cnds.LongitudAMetros(lngy2);
             double metros = Math.Sqrt(Math.Pow((x2 - x1), 2) + (Math.Pow((y2 - y1), 2)));
             Assert.AreEqual(metros, Cnds.ObtenerDistanciaMetros(cnds2));
+            Assert.IsTrue(Cnds.ObtenerDistanciaMetros(cnds2) > 0);
 
 
         }

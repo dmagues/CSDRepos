@@ -61,6 +61,11 @@ namespace POISService
             return p * 111302.61697430261;
         }
 
+        /// <summary>
+        /// Funcion para Obtener la Distancia en metros
+        /// </summary>
+        /// <param name="cnd"></param>
+        /// <returns>Esta variable es de Tipo Coordenada contra la cual se calculara la distancia</returns>
         public double ObtenerDistanciaMetros(Coordenada cnd)
         {
             double x1 = LatitudAMetros(this.Lat);

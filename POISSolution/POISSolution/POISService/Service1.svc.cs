@@ -20,24 +20,80 @@ namespace POISService
 
         public List<Coordenada> ObtenerPoIsMasCercanos(double x, double y, double radio)
         {
-            return null;
+            var op = new Coordenada();
+            op.Lat = x;
+            op.Lng = y;
+            //var distanciasPts = new Dictionary<Coordenada, double>();
+            //var lst = ObtenerCoordenadas();
 
-            //foreach (var obj in listaCordenadas)
-            //{
-            //    var distancia = obj.ObtenerDistancia();
+            //lst.ForEach(c => distanciasPts.Add(c, op.ObtenerDistancia(c)));
 
-            //    if(distancia <= radio)
-            //        Console.WriteLine(obj.ObtenerLatitud().ToString());
+            //return distanciasPts.OrderBy(c => c.Value);
 
-            //    Assert.AreEqual<int>(0, distancia);
-                
-            //}
+            var lstPoisCercanos = new List<Coordenada>();
+
+            var lstCooordenadas = ObtenerCoordenadas();
+
+            foreach (var item in lstCooordenadas)
+            {
+                var dist = op.ObtenerDistancia(item);
+                Console.WriteLine(dist);
+                dist = 5;
+                if (dist <= radio)
+                {
+                    lstPoisCercanos.Add(item);
+                }
+            }
+            if (lstPoisCercanos.Count > 0)
+                return lstPoisCercanos;
+            else
+            {
+                return null;
+            }
         }
 
 
         public List<Coordenada> ObtenerCoordenadas()
         {
-            return null;
+            return new List<Coordenada>()
+            {
+                new Coordenada // 
+                {
+                    Nombre = "Cebiches de la Ruminahui",
+                    Lat = -2.143007,
+                    Lng = -79.864096,
+                    Categoria = "Restaurante"
+                },
+                new Coordenada // 
+                {
+                    Nombre = "Red Crab",
+                    Lat = -2.130156,
+                    Lng = -79.864679,
+                    Categoria =  "Restaurante"
+                },
+                new Coordenada // 
+                {
+                    Nombre = "SuperCines RioCentro EntreRios",
+                    Lat = -2.141591,
+                    Lng = -79.865301,
+                    Categoria =  "Diversion"
+                },
+                new Coordenada // 
+                {
+                    Nombre = "Parrillada del Nato",
+                    Lat = -2.130017,
+                    Lng = -79.863466,
+                    Categoria =  "Restaurante"
+                },
+                new Coordenada // 
+                {
+                    Nombre = "Parque Historico",
+                    Lat = -2.143865,
+                    Lng = -79.869438,
+                    Categoria =  "Diversion"
+                },
+                
+            };
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

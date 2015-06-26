@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POISService", "POISService\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POISWebApp", "POISWebApp\POISWebApp.csproj", "{5F3D8191-A136-4D80-A09C-B8A3ABD62792}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POISTest", "POISTest\POISTest.csproj", "{EACE6D79-646A-4CE3-B22E-D98A29C8806B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POISwebapp.Client", "POISwebapp.Client\POISwebapp.Client.csproj", "{2D3ADBD2-77E5-4144-9FC3-D15361F02771}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{5F3D8191-A136-4D80-A09C-B8A3ABD62792}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F3D8191-A136-4D80-A09C-B8A3ABD62792}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F3D8191-A136-4D80-A09C-B8A3ABD62792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EACE6D79-646A-4CE3-B22E-D98A29C8806B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EACE6D79-646A-4CE3-B22E-D98A29C8806B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EACE6D79-646A-4CE3-B22E-D98A29C8806B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EACE6D79-646A-4CE3-B22E-D98A29C8806B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D3ADBD2-77E5-4144-9FC3-D15361F02771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3ADBD2-77E5-4144-9FC3-D15361F02771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3ADBD2-77E5-4144-9FC3-D15361F02771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3ADBD2-77E5-4144-9FC3-D15361F02771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,11 +8,11 @@ namespace POISTest
     public class TestBuscarPunto
     {
         [TestMethod]
-        public void CompruebaValorLatitud()
+        public void CompruebaValorCoordenada()
         {
             Coordenada Cnds = new Coordenada();
 
-            Cnds.Setlatitud(12345);
+            Cnds.SetCoordenada(125,345);
 
             Assert.AreEqual(12345, Cnds.ObtenerLatitud());
         }

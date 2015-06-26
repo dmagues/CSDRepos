@@ -8,16 +8,19 @@ namespace POISService
     public class Coordenada
     {
 
-        private double Latitud;
+        private double Lat;
+        private double Lng;
+        
 
         public double ObtenerLatitud()
         {
-           return Latitud;
+           return Lat;
         }
 
-        public void Setlatitud(double p)
+        public void SetCoordenada(double plat, double plng )
         {
-            Latitud = p;
+            Lat = plat;
+            Lng = plng;
         }
     }
 }

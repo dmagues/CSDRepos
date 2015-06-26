@@ -7,14 +7,26 @@ namespace POISTest
     [TestClass]
     public class TestBuscarPunto
     {
+        Coordenada Cnds = new Coordenada();
+
         [TestMethod]
         public void CompruebaValorCoordenada()
         {
-            Coordenada Cnds = new Coordenada();
+            
+            Cnds.SetCoordenada(125, 345);
+            Assert.AreEqual(Cnds, Cnds.ObtenerCoordenada());
+        }
 
-            Cnds.SetCoordenada(125,345);
+        [TestMethod]
+        public void CompruebaDistancia()
+        {
+            
+            Coordenada cnds2 = new Coordenada();
 
-            Assert.AreEqual(12345, Cnds.ObtenerLatitud());
+            Cnds.SetCoordenada(-74.48, -7.6);
+            cnds2.SetCoordenada(-74.49, -7.62);
+
+            Assert.AreEqual(2, Cnds.ObtenerDistancia(cnds2));
         }
 
     }

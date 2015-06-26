@@ -9,6 +9,8 @@ namespace POISTest
         [TestMethod]
         public void TestMethod1()
         {
+            POISService.obtenerPOIsMasCercanos(-2.33, -79.33, 200 );
+
         }
     }
 }

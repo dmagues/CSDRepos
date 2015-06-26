@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 namespace POISService
 {
     public class Coordenada
@@ -12,7 +13,7 @@ namespace POISService
         private double Lng;
         
 
-        public object  ObtenerCoordenada()
+        public Coordenada  ObtenerCoordenada()
         {
            return this;
         }
@@ -45,7 +46,8 @@ namespace POISService
 
         public double  ObtenerDistancia( Coordenada cnd)
         {
-            return 2;
+            //Formula: Raiz((X2-X1)^2 + (Y2-Y1)^2)
+            return Math.Sqrt(Math.Pow((cnd.ObtenerLatitud() - this.Lat),2) + (Math.Pow((cnd.ObtenerLongitud() - this.Lng),2)));
         }
     }
 }

@@ -52,6 +52,13 @@
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestBuscarPunto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POISService\POISService.csproj">
+      <Project>{8c39d493-edf9-4c1a-b615-4d8341180be3}</Project>
+      <Name>POISService</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

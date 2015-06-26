@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -17,9 +18,9 @@ namespace POISService
             return string.Format("You entered: {0}", value);
         }
 
-        public void ObtenerPoIsMasCercanos(double x, double y, double radio)
+        public IList ObtenerPoIsMasCercanos(double x, double y, double radio)
         {
-
+            return null;
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

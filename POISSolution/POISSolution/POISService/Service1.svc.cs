@@ -19,7 +19,7 @@ namespace POISService
 
         public void ObtenerPoIsMasCercanos(double x, double y, double radio)
         {
-            
+
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

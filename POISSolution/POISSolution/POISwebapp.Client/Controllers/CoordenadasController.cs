@@ -9,5 +9,6 @@ namespace POISwebapp.Client.Controllers
 {
     public class CoordenadasController : ApiController
     {
+
     }
 }

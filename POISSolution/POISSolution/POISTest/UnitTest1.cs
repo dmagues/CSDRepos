@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using POISService;
 
 namespace POISTest
 {
@@ -9,6 +10,9 @@ namespace POISTest
         [TestMethod]
         public void TestMethod1()
         {
+            POISService.Service1 servicio = new Service1();
+            servicio.ObtenerPoIsMasCercanos(1,2,3);
+
         }
     }
 }

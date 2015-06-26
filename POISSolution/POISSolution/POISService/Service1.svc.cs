@@ -18,7 +18,24 @@ namespace POISService
             return string.Format("You entered: {0}", value);
         }
 
-        public IList ObtenerPoIsMasCercanos(double x, double y, double radio)
+        public List<Coordenada> ObtenerPoIsMasCercanos(double x, double y, double radio)
+        {
+            return null;
+
+            //foreach (var obj in listaCordenadas)
+            //{
+            //    var distancia = obj.ObtenerDistancia();
+
+            //    if(distancia <= radio)
+            //        Console.WriteLine(obj.ObtenerLatitud().ToString());
+
+            //    Assert.AreEqual<int>(0, distancia);
+                
+            //}
+        }
+
+
+        public List<Coordenada> ObtenerCoordenadas()
         {
             return null;
         }

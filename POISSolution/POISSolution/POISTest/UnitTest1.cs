@@ -15,10 +15,16 @@ namespace POISTest
         public void DeberiaObtenerPOIsMasCercanos()
         {
             var servicio = new Service1();
-            var listaCordenadas = servicio.ObtenerPoIsMasCercanos(-2.132114, -79.865806, 3);
-             
+//            var listaCordenadas = servicio.ObtenerPoIsMasCercanos(-2.132114, -79.865806, 500);
+            var listaCordenadas = servicio.ObtenerPoIsMasCercanosC(-2.132114, -79.865806, 1500,"Restaurante");
+
+            foreach (var listaCordenada in listaCordenadas)
+            {
+                Console.WriteLine(listaCordenada.Nombre);
+            }
          
-            Assert.IsNull(listaCordenadas);
+            Assert.IsNotNull(listaCordenadas);
+           // Assert.AreEqual(5,listaCordenadas.Count());
 
             //Assert.AreEqual(-2.143007, listaCordenadas.First().Lat);
 

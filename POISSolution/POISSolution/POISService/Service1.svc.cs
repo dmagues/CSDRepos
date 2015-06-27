@@ -36,23 +36,66 @@ namespace POISService
 
             foreach (var item in lstCooordenadas)
             {
-                var dist = op.ObtenerDistancia(item);
-                Console.WriteLine(dist);
-                dist = 5;
+                var dist = op.ObtenerDistanciaMetros(item);
+                //Console.WriteLine(dist);
+                //dist = 5;
                 if (dist <= radio)
                 {
                     lstPoisCercanos.Add(item);
                 }
             }
             if (lstPoisCercanos.Count > 0)
+            {
                 return lstPoisCercanos;
+                //Console.WriteLine(lstPoisCercanos);  
+            }
+                
             else
             {
                 return null;
             }
         }
 
+        public List<Coordenada> ObtenerPoIsMasCercanosC(double x, double y, double radio, string PCat)
+        {
+            var op = new Coordenada();
+            op.Lat = x;
+            op.Lng = y;
+            op.Categoria = PCat;
+            //var distanciasPts = new Dictionary<Coordenada, double>();
+            //var lst = ObtenerCoordenadas();
 
+            //lst.ForEach(c => distanciasPts.Add(c, op.ObtenerDistancia(c)));
+
+            //return distanciasPts.OrderBy(c => c.Value);
+
+            var lstPoisCercanos = new List<Coordenada>();
+
+            var lstCooordenadas = ObtenerCoordenadas();
+
+            foreach (var item in lstCooordenadas)
+            {
+                var dist = op.ObtenerDistanciaMetros(item);
+                var cate = item.Categoria;
+                //Console.WriteLine(dist);
+                //dist = 5;
+                if (dist <= radio) 
+                {
+                    if (cate == PCat)
+                      lstPoisCercanos.Add(item);
+                }
+            }
+            if (lstPoisCercanos.Count > 0)
+            {
+                return lstPoisCercanos;
+                //Console.WriteLine(lstPoisCercanos);  
+            }
+
+            else
+            {
+                return null;
+            }
+        }
         public List<Coordenada> ObtenerCoordenadas()
         {
             return new List<Coordenada>()

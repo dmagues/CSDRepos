@@ -20,13 +20,20 @@ namespace POISService
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
-        [OperationContract]
-        [WebInvoke(Method = "Get", UriTemplate = "poiservice")]
+        //[WebInvoke(Method = "Get", UriTemplate = "poiservice")]
+        [WebGet(UriTemplate = "poiservice")]
+        [OperationContract]        
         List<Coordenada> ObtenerCoordenadas();
 
-        [OperationContract]
-        [WebInvoke(Method = "Get", UriTemplate = "poiservice/?x={x}&y={y}&radio={radio}")]
+        //[WebInvoke(Method = "Get", UriTemplate = "poiservice/?x={x}&y={y}&radio={radio}")]
+        [WebGet(ResponseFormat=WebMessageFormat.Json,
+            UriTemplate = "poiservice/cercano/?x={x}&y={y}&radio={radio}")]
+        [OperationContract]        
         List<Coordenada> ObtenerPoIsMasCercanos(double x, double y, double radio);
+
+        [WebGet(UriTemplate = "poiservice/cercano/categoria/?x={x}&y={y}&radio={radio}&PCat={PCat}")]
+        [OperationContract]
+        List<Coordenada> ObtenerPoIsMasCercanosC(double x, double y, double radio, string PCat);
 
         
     }

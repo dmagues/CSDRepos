@@ -44,12 +44,14 @@ namespace POISService
                     lstPoisCercanos.Add(item);
                 }
             }
+
+            
             if (lstPoisCercanos.Count > 0)
             {
                 return lstPoisCercanos;
                 //Console.WriteLine(lstPoisCercanos);  
             }
-                
+
             else
             {
                 return null;

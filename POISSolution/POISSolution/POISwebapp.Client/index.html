@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2>Puntos de interes</h2>
+        <ul id="coordenadas" />
+    </div>
+
+    <div>
+        <h2>Puntos de interes mas Cercanos</h2>
+        <h3>Ubicacion Actual:</h3>
+        Lat:<input type="text" id="lat"/>
+        Lng:<input type="text" id="lng" />
+        <input type="button" value="Buscar" onclick="find();" />
+
+        <ul id="cercanos" />
+    </div>
+
+    
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+    var uri = 'api/coordenadas';
+
+    $(document).ready(function () {
+      // Send an AJAX request
+      $.getJSON(uri)
+          .done(function (data) {
+            // On success, 'data' contains a list of products.
+            $.each(data, function (key, item) {
+              // Add a list item for the product.
+              $('<li>', { text: formatItem(item) }).appendTo($('#coordenadas'));
+            });
+          });
+    });
+
+    function formatItem(item) {
+      return item.Nombre + ' (' + item.Categoria + ')  Ubicacion: ('+ item.Lat+','+item.Lng+')';
+    }
+
+    function find() {
+        
+        var lat = $('#lat').val();
+        var lng = $('#lng').val();
+
+        var coordenada = {};
+        coordenada.lat = lat;
+        coordenada.lng = lng;
+
+        $.getJSON(uri+'/',coordenada)
+            .done(function (data) {
+                $.each(data, function (key, item) {
+                    // Add a list item for the product.
+                    $('<li>', { text: formatItem(item) }).appendTo($('#cercanos'));
+                });
+            })
+            .fail(function (jqXHR, textStatus, err) {
+                alert('Error: ' + err);
+            });
+    }
+    </script>
+
+
+</body>
+</html>
